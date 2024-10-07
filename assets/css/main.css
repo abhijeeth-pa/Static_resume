@@ -111,6 +111,55 @@ a{
     text-decoration: none;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar .brand-and-toggler {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar .navbar-links {
+        display: none; /* Hide links on mobile */
+    }
+
+    .navbar .navbar-toggler {
+        display: block; /* Show a menu toggle icon for mobile */
+        cursor: pointer;
+    }
+
+    .navbar .navbar-toggler-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+}
+
+/* Expanded menu on mobile */
+@media (max-width: 768px) {
+    .navbar-links.show {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        border-top: 1px solid #ccc;
+        z-index: 999;
+    }
+
+    .navbar .navbar-link {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+}
+
 /* fonts */
 .font-poppins{font-family: var(--font-poppins);}
 .font-manrope{font-family: var(--font-manrope);}
